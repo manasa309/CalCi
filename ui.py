@@ -12,6 +12,15 @@ menu = [
     "Square Root (√x)",
     "Factorial (n!)",
     "Absolute Value (|x|)",
+    'sin(x)',
+    'cos(x)',
+    'tan(x)',
+    'asin(x)',
+    'acos(x)',
+    'atan(x)',
+    'natural log (ln)',
+    'log to base 10 (log)',
+    'exponential (exp)',
     "Exit"
 ]
 

@@ -31,9 +31,7 @@ Supports **basic arithmetic** and **advanced scientific operations** using a sim
 - Log Base 10 (log)  
 - Exponential (exp)
 
-### Constants
-- π (pi)  
-- e
+
 
 ### User Interface
 - Simple text-based console input/output  
@@ -48,6 +46,8 @@ Supports **basic arithmetic** and **advanced scientific operations** using a sim
 
 ```bash
 git clone <your-repo-url>
-cd calculator_project
+cd calculator_project 
+python calculator.py
+
 
 
