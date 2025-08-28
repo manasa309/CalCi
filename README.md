@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.x-pink.svg?style=for-the-badge&logo=python)](https://www.python.org/)  
 [![Tkinter](https://img.shields.io/badge/UI-Tkinter-ff69b4?style=for-the-badge&logo=windowsterminal)]()  
-[![ITS PINKKKK 🙈🙉🙊](https://img.shields.io/badge/Made%20With-Love-ffb6c1.svg?style=for-the-badge)]()  
+![ITS PINKKKK 🙈🙉🙊](https://img.shields.io/badge/ITS%20PINKKKK-%F0%9F%99%88%F0%9F%99%89%F0%9F%99%8A-pink?style=for-the-badge&logo=github)
 
 ---
 
