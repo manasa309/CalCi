@@ -4,7 +4,7 @@ import random
 
 root = tk.Tk()
 root.title("Pink Lily Calculator 🌸")
-root.geometry("400x600")
+root.geometry("400x650")
 root.config(bg="#ffe6f0")
 
 current_input = ""   # current number being typed
@@ -31,10 +31,12 @@ def set_operator(op):
     if current_input != "":
         operand1 = float(current_input)
         operator = op
-        current_input = ""
-        display_var.set(f"{operand1} {op}")
+        current_input = ""  # clear for second number
+        display_var.set("")  # don’t show operand1 op, just clear screen
+
 
 def sci_function(func):
+    """Handle scientific functions from operations.py"""
     global current_input
     try:
         num = float(current_input) if current_input != "" else float(display_var.get())
@@ -80,11 +82,11 @@ def calculate():
             if operator == "+":
                 result = operations.add(operand1, operand2)
             elif operator == "-":
-                result = operations.subtract(operand1, operand2)
+                result = operations.sub(operand1, operand2)
             elif operator == "×":
-                result = operations.multiply(operand1, operand2)
+                result = operations.mul(operand1, operand2)
             elif operator == "÷":
-                result = operations.divide(operand1, operand2)
+                result = operations.div(operand1, operand2)
             else:
                 result = "Error"
 
@@ -92,22 +94,15 @@ def calculate():
             # Reset so result can be chained
             operand1, current_input, operator = result, "", None
 
-        except Exception:
+        except Exception as e:
             display_var.set("Error")
             operand1, operator, current_input = None, None, ""
 
 # ---------------- BUTTONS ----------------
-buttons = [
-    ["7", "8", "9", "÷"],
-    ["4", "5", "6", "×"],
-    ["1", "2", "3", "-"],
-    ["0", ".", "=", "+"],
-    ["CA"]
-]
-
 btns_frame = tk.Frame(root, bg="#ffe6f0")
 btns_frame.pack()
 
+# scientific buttons
 sci_buttons = [
     ["sqrt", "pow", "fac", "a_val"],
     ["sin", "cos", "tan"],
@@ -123,6 +118,15 @@ for row in sci_buttons:
         tk.Button(row_frame, text=btn, font=("Comic Sans MS", 12, "bold"),
                   bg="#ffb3d9", fg="white", width=6, height=2,
                   command=action, relief="raised", bd=3).pack(side="left", padx=3)
+
+# basic calculator buttons
+buttons = [
+    ["7", "8", "9", "÷"],
+    ["4", "5", "6", "×"],
+    ["1", "2", "3", "-"],
+    ["0", ".", "=", "+"],
+    ["CA"]
+]
 
 for row in buttons:
     row_frame = tk.Frame(btns_frame, bg="#ffe6f0")
